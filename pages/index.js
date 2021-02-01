@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Head from 'next/head';
+
 import db from '../db.json';
 import Widget from '../src/components/Widget/';
 import QuizBackground from '../src/components/QuizBackground';
@@ -26,6 +28,9 @@ export const QuizContainer = styled.div`
 export default function Home() {
   return (
     <QuizBackground backgroundImage = {db.bg}>
+      <Head>
+        TecnoQuiz - Aula 1
+      </Head>
       <QuizContainer>
         <Widget>
           <Widget.Header>
